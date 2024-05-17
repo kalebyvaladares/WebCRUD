@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Criar contato";
+}
+
+<style>
+    .form-control {
+        max-width: 250px;
+    }
+</style>
+
+<div>
+    <h2 class="display-4">Criar novo contato</h2>
+</div><br />
+
+<a class="btn btn-outline-secondary" role="button" asp-controller="Contato" asp-action="Index">Voltar</a>
+<br />
+<div>
+<form>
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" placeholder="Digite o nome">
+    <br />
+    <label for="email">Email</label>
+    <input type="text" class="form-control" placeholder="Digite o email">
+    <br />
+    <label for="celular">Celular</label>
+    <input type="text" class="form-control" placeholder="Digite o celular">
+    <br />
+    <button type="submit" class="btn btn-outline-success">Criar</button>
+</form>
+</div>
