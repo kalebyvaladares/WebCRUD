@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Confirmar exclusão";
+}
+
+<style>
+    .tamanho{
+        width: 200px;
+        margin: 5px
+    }
+</style>
+
+<div class="text-center">
+    <h2 class="display-4">Exclusão de contato</h2>
+    <p>Tem certeza que deseja apagar este contato?</p>
+    <br />
+    <div>
+    <a class="btn btn-outline-secondary tamanho" role="button" asp-controller="Contato" asp-action="Index">Cancelar exclusão</a>
+    <br />
+    <a class="btn btn-outline-danger tamanho" role="button">Apagar contato</a>
+    </div>
+</div>

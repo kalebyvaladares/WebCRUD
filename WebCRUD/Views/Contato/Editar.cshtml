@@ -4,8 +4,14 @@
 
 <style>
     .form-control {
-        max-width: 250px;
+        max-width: 300px;
     }
+
+    .tamanho {
+        width: 100px;
+        margin-bottom: 5px
+    }
+
 </style>
 
 <div>
@@ -13,7 +19,7 @@
 </div>
 <br />
 
-<a class="btn btn-outline-secondary" role="button" asp-controller="Contato" asp-action="Index">Voltar</a>
+<a class="btn btn-outline-secondary tamanho" role="button" asp-controller="Contato" asp-action="Index">Voltar</a>
 <br />
 <div>
     <form>
@@ -26,6 +32,6 @@
         <label for="celular">Celular</label>
         <input type="text" class="form-control" placeholder="Digite o celular">
         <br />
-        <button type="submit" class="btn btn-outline-success">Editar</button>
+        <button type="submit" class="btn btn-outline-success tamanho">Editar</button>
     </form>
 </div>
