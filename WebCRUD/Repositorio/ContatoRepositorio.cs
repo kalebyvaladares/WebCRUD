@@ -31,7 +31,7 @@ namespace WebCRUD.Repositorio
         public ContatoModel Alterar(ContatoModel contato)
         {
             ContatoModel ContatoDB = ListarPorId(contato.Id);
-            if (ContatoDB == null) throw new System.Exception("O contato é nulo");
+            if (ContatoDB == null) throw new System.Exception("Erro na alteração do contato.");
 
             ContatoDB.Nome = contato.Nome;
             ContatoDB.Email = contato.Email;
@@ -40,6 +40,14 @@ namespace WebCRUD.Repositorio
             _bancoContext.Contatos.Update(ContatoDB);
             _bancoContext.SaveChanges();
             return ContatoDB;
+        }
+        public bool Apagar(int id)
+        {
+            ContatoModel ContatoDB = ListarPorId(id);
+            if (ContatoDB == null) throw new System.Exception("Erro na deleção do contato.");
+            _bancoContext.Contatos.Remove(ContatoDB);
+            _bancoContext.SaveChanges();
+            return true;
         }
     }
 }

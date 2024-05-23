@@ -8,5 +8,6 @@ namespace WebCRUD.Repositorio
         List<ContatoModel> BuscarTodos();
         ContatoModel Adicionar(ContatoModel contato);
         ContatoModel Alterar(ContatoModel contato);
+        bool Apagar(int id);
     }
 }
